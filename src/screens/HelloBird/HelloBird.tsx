@@ -1,14 +1,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
+import style from './style';
 
 const HelloBird: React.FC = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    <View style={{style}}>
       <Text>Hello, Bird!</Text>
     </View>
   );

@@ -7,7 +7,7 @@ interface Styles {
   highlight: TextStyle;
 }
 
-const styles = StyleSheet.create<Styles>({
+const style = StyleSheet.create<Styles>({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
@@ -26,4 +26,4 @@ const styles = StyleSheet.create<Styles>({
   },
 });
 
-export default styles;
+export default style;
