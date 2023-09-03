@@ -10,6 +10,7 @@ const style = StyleSheet.create<Styles>({
     margin: 24,
   },
   sectionContainer: {
+    borderWidth: 5,
     paddingHorizontal: 24,
   },
 });

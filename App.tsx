@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import Logo from './src/screens/HelloBird/Logo';
+import Logo from './src/screens/common/logo/Logo';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
