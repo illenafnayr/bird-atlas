@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import Logo from './src/screens/common/logo/Logo';
+import Home from './src/screens/home/Home';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,7 +27,7 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <View>
-          <Logo />
+          <Home />
         </View>
       </ScrollView>
     </SafeAreaView>

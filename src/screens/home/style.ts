@@ -1,13 +1,13 @@
 import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
 
 interface Styles {
-  logoContainer: TextStyle;
+  titleText: TextStyle;
   sectionContainer: ViewStyle;
 }
 
 const style = StyleSheet.create<Styles>({
-  logoContainer: {
-    margin: 24,
+  titleText: {
+    color: 'red',
   },
   sectionContainer: {
     paddingHorizontal: 24,
