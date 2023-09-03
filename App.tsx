@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import HelloBird from './src/screens/HelloBird/HelloBird';
+import Logo from './src/screens/HelloBird/Logo';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,7 +27,7 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <View>
-          <HelloBird />
+          <Logo />
         </View>
       </ScrollView>
     </SafeAreaView>

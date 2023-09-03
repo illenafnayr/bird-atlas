@@ -3,7 +3,7 @@ import {View} from 'react-native';
 import style from './style';
 import Svg, {G, Path, Polygon, Defs} from 'react-native-svg';
 
-const HelloBird: React.FC = () => {
+const Logo: React.FC = () => {
   return (
     <View style={style.sectionContainer}>
       <Svg
@@ -34,4 +34,4 @@ const HelloBird: React.FC = () => {
   );
 };
 
-export default HelloBird;
+export default Logo;
