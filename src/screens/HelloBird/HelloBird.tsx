@@ -4,7 +4,7 @@ import style from './style';
 
 const HelloBird: React.FC = () => {
   return (
-    <View style={{style}}>
+    <View style={style.sectionContainer}>
       <Text>Hello, Bird!</Text>
     </View>
   );
