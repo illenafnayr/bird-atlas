@@ -1,6 +1,7 @@
 import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
 
 interface Styles {
+  logoContainer: TextStyle;
   sectionContainer: ViewStyle;
   sectionTitle: TextStyle;
   sectionDescription: TextStyle;
@@ -8,6 +9,9 @@ interface Styles {
 }
 
 const style = StyleSheet.create<Styles>({
+  logoContainer: {
+    margin: 24,
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
