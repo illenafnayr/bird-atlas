@@ -1,16 +1,18 @@
 import React from 'react';
 import {View} from 'react-native';
-import Mapbox from '@rnmapbox/maps';
+import MapboxGL from '@rnmapbox/maps';
 import style from './style';
+import {MAPBOX_ACCESS_TOKEN} from '@env';
 
-Mapbox.setAccessToken(
-  'MAPBOX_TOKEN',
-);
-
+try {
+  MapboxGL.setAccessToken(MAPBOX_ACCESS_TOKEN);
+} catch (error) {
+  console.error('ERROR: ', error);
+}
 const BirdMap: React.FC = () => (
   <View style={style.page}>
     <View style={style.container}>
-      <Mapbox.MapView style={style.map} />
+      <MapboxGL.MapView style={style.map} />
     </View>
   </View>
 );
