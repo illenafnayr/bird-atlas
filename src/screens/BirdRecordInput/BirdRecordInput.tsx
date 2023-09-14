@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 import style from './style';
 
 export class BirdRecordInput extends React.Component<{}, {}> {
