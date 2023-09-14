@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, Image } from 'react-native';
+import { View, Text, TextInput, Image, Button } from 'react-native';
 import style from './style';
 
 interface BirdRecordInputProps {}
@@ -123,6 +123,13 @@ export class BirdRecordInput extends Component<BirdRecordInputProps, BirdRecordI
           keyboardType="default"
         />
 
+        <Button
+          onPress={this.submitBirdRecord}
+          title="Submit Record"
+          color="#841584"
+          accessibilityLabel="Submit record of bird or birds spotted"
+        />
+
         <Text>Name: {this.state.birdName}</Text>
         <Text>Type: {this.state.birdType}</Text>
         <Image source={{ uri: this.state.imgSrc }} />
@@ -135,5 +142,9 @@ export class BirdRecordInput extends Component<BirdRecordInputProps, BirdRecordI
         <Text>Description: {this.state.birdDescription}</Text>
       </View>
     );
+  }
+
+  submitBirdRecord() {
+    console.log('Bird Record Submitted');
   }
 }
