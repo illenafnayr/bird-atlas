@@ -3,6 +3,7 @@ import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 interface Styles {
   text: TextStyle;
   sectionContainer: ViewStyle;
+  input: ViewStyle;
 }
 
 const style = StyleSheet.create<Styles>({
@@ -11,6 +12,9 @@ const style = StyleSheet.create<Styles>({
   },
   sectionContainer: {
     paddingHorizontal: 24,
+  },
+  input: {
+    borderWidth: 2,
   },
 });
 
