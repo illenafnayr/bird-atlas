@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, Image } from 'react-native';
 import style from './style';
-import { File } from 'buffer';
 
 interface BirdRecordInputProps {}
 
 interface BirdRecordInputState {
   birdName: string;
   birdType: string;
-  // imgSrc: ImageSourcePropType;
+  imgSrc: string;
   location: string;
   date: string;
   weather: string;
@@ -26,7 +25,7 @@ export class BirdRecordInput extends Component<BirdRecordInputProps, BirdRecordI
     this.state = {
       birdName: '',
       birdType: '',
-      // imgSrc: '',
+      imgSrc: '',
       location: '',
       date: new Date().toLocaleDateString(),
       weather: '',
@@ -58,13 +57,13 @@ export class BirdRecordInput extends Component<BirdRecordInputProps, BirdRecordI
           keyboardType="default"
         />
 
-        {/* <TextInput
+        <TextInput
           style={style.input}
           value={this.state.imgSrc}
           onChangeText={imgSrc => this.setState({ imgSrc })}
           placeholder="Image Source"
           keyboardType="default"
-        /> */}
+        />
 
         <TextInput
           style={style.input}
@@ -108,14 +107,32 @@ export class BirdRecordInput extends Component<BirdRecordInputProps, BirdRecordI
           keyboardType="numeric"
         />
 
-        <Text>{this.state.birdName}</Text>
-        <Text>{this.state.birdType}</Text>
-        {/* <Image source={this.state.imgSrc} /> */}
-        <Text>{this.state.location}</Text>
-        <Text>{this.state.date}</Text>
-        <Text>{this.state.weather}</Text>
-        <Text>{this.state.season}</Text>
-        <Text>{this.state.quantitySpotted}</Text>
+        <TextInput
+          style={style.input}
+          value={this.state.birdFeatures}
+          onChangeText={birdFeatures => this.setState({ birdFeatures })}
+          placeholder="Features"
+          keyboardType="default"
+        />
+
+        <TextInput
+          style={style.input}
+          value={this.state.birdDescription}
+          onChangeText={birdDescription => this.setState({ birdDescription })}
+          placeholder="Description"
+          keyboardType="default"
+        />
+
+        <Text>Name: {this.state.birdName}</Text>
+        <Text>Type: {this.state.birdType}</Text>
+        <Image source={{ uri: this.state.imgSrc }} />
+        <Text>Location: {this.state.location}</Text>
+        <Text>Date: {this.state.date}</Text>
+        <Text>Weather: {this.state.weather}</Text>
+        <Text>Season: {this.state.season}</Text>
+        <Text>Quantity Spotted: {this.state.quantitySpotted}</Text>
+        <Text>Features: {this.state.birdFeatures}</Text>
+        <Text>Description: {this.state.birdDescription}</Text>
       </View>
     );
   }
