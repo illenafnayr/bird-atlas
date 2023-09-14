@@ -1,9 +1,8 @@
 import React from 'react';
-// import React, {componentDidMount} from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 import MapboxGL from '@rnmapbox/maps';
 import style from './style';
-import {MAPBOX_ACCESS_TOKEN} from '@env';
+import { MAPBOX_ACCESS_TOKEN } from '@env';
 
 try {
   MapboxGL.setAccessToken(MAPBOX_ACCESS_TOKEN);
@@ -13,9 +12,6 @@ try {
 }
 
 export class BirdMap extends React.Component<{}, {}> {
-  // componentDidMount(): void {
-  // }
-
   render() {
     return (
       <View style={style.page}>

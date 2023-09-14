@@ -1,7 +1,7 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 import style from './style';
-import Svg, {G, Path, Polygon, Defs} from 'react-native-svg';
+import Svg, { G, Path, Polygon, Defs } from 'react-native-svg';
 
 const Logo: React.FC = () => {
   return (

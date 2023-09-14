@@ -1,12 +1,12 @@
-import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
+import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
 
 interface Styles {
-  titleText: TextStyle;
+  text: TextStyle;
   sectionContainer: ViewStyle;
 }
 
 const style = StyleSheet.create<Styles>({
-  titleText: {
+  text: {
     color: 'red',
   },
   sectionContainer: {

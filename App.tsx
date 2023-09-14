@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Home from './src/screens/home/Home';
 
 function App(): JSX.Element {
