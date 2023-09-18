@@ -1,28 +1,27 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, useColorScheme, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { SafeAreaView, ScrollView, StatusBar, useColorScheme, View } from 'react-native';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { Home } from './src/screens/home/Home';
+import Home from './src/screens/home/Home';
+import { BirdRecordInput } from './src/screens/BirdRecordInput/BirdRecordInput';
+
+type RootStackParamList = {
+  Home: undefined;
+  BirdRecordInput: undefined;
+  // undefined because you aren't passing any params to the home screen
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-        <View>
-          <Home />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="BirdRecordInput" component={BirdRecordInput} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
