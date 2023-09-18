@@ -1,17 +1,22 @@
-import React from 'react';
-import { SafeAreaView } from 'react-native';
+import React, { Component } from 'react';
+import { Button, SafeAreaView } from 'react-native';
 import style from './style';
 import Logo from '../../common/logo/Logo';
-import { BirdRecordInput } from '../BirdRecordInput/BirdRecordInput';
 
-const Home: React.FC = () => {
-  return (
-    <SafeAreaView style={style.sectionContainer}>
-      <Logo />
-      {/* <BirdMap /> */}
-      <BirdRecordInput />
-    </SafeAreaView>
-  );
-};
-
-export default Home;
+export class Home extends Component<{}, {}> {
+  render() {
+    return (
+      <SafeAreaView style={style.sectionContainer}>
+        <Logo />
+        <Button
+          onPress={() => {
+            console.log('Navigate to home screen button press');
+          }}
+          title="Navigate Home"
+          color="#841584"
+          accessibilityLabel="Navigate to home Screen"
+        />
+      </SafeAreaView>
+    );
+  }
+}
