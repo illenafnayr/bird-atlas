@@ -4,8 +4,7 @@ import style from './style';
 import Logo from '../../common/logo/Logo';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 
-type RootStackParamList = {
-  Home: undefined;
+type HomeStackParamList = {
   BirdRecordInput: undefined;
 };
 
@@ -14,7 +13,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = () => {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<NavigationProp<HomeStackParamList>>();
 
   const handleNavigate = () => {
     navigation.navigate('BirdRecordInput');

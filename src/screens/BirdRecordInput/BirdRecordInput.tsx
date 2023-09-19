@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Image, Button } from 'react-native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import style from './style';
+
+type BirdRecordInputStackParamList = {
+  Home: undefined;
+};
 
 interface BirdRecordInputProps {}
 
@@ -19,8 +24,15 @@ const BirdRecordInput: React.FC<BirdRecordInputProps> = () => {
     birdDescription: '',
   });
 
+  const navigation = useNavigation<NavigationProp<BirdRecordInputStackParamList>>();
+
+  const handleNavigate = () => {
+    navigation.navigate('Home');
+  };
+
   const submitBirdRecord = () => {
     console.log('Bird Record Submitted');
+    handleNavigate();
   };
 
   return (
