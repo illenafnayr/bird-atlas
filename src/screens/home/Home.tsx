@@ -10,14 +10,13 @@ type RootStackParamList = {
 };
 
 interface HomeProps {
-  // Define any props that your Home component should receive here
+  // Define props here
 }
 
 const Home: React.FC<HomeProps> = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const handleNavigate = () => {
-    // Navigate to the 'BirdRecordInput' screen
     navigation.navigate('BirdRecordInput');
   };
 
