@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import { SafeAreaView, ScrollView, StatusBar, useColorScheme, View } from 'react-native';
 
 import Home from './src/screens/home/Home';
-import { BirdRecordInput } from './src/screens/BirdRecordInput/BirdRecordInput';
+import BirdRecordInput from './src/screens/BirdRecordInput/BirdRecordInput';
 
 type RootStackParamList = {
   Home: undefined;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, SafeAreaView } from 'react-native';
 import style from './style';
 import Logo from '../../common/logo/Logo';
@@ -13,29 +13,25 @@ interface HomeProps {
   // Define any props that your Home component should receive here
 }
 
-export default class Home extends Component<HomeProps> {
-  constructor(props: HomeProps) {
-    super(props);
-  }
+const Home: React.FC<HomeProps> = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-  handleNavigate = () => {
-    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
+  const handleNavigate = () => {
     // Navigate to the 'BirdRecordInput' screen
     navigation.navigate('BirdRecordInput');
   };
 
-  render() {
-    return (
-      <SafeAreaView style={style.sectionContainer}>
-        <Logo />
-        <Button
-          onPress={this.handleNavigate}
-          title="Navigate Home"
-          color="#841584"
-          accessibilityLabel="Navigate to home Screen"
-        />
-      </SafeAreaView>
-    );
-  }
-}
+  return (
+    <SafeAreaView style={style.sectionContainer}>
+      <Logo />
+      <Button
+        onPress={handleNavigate}
+        title="Navigate Home"
+        color="#841584"
+        accessibilityLabel="Navigate to home Screen"
+      />
+    </SafeAreaView>
+  );
+};
+
+export default Home;
