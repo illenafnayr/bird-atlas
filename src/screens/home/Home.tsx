@@ -6,6 +6,7 @@ import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 type HomeStackParamList = {
   CreateAccount: undefined;
+  AccountLogIn: undefined;
 };
 
 interface HomeProps {
@@ -16,8 +17,8 @@ const Home: React.FC<HomeProps> = () => {
   const navigation = useNavigation<NavigationProp<HomeStackParamList>>();
 
   const navigateToAccountLogin = () => {
-    console.log('Navigate to Account Login');
-    // navigation.navigate('AccountLogin');
+    // console.log('Navigate to Account Login');
+    navigation.navigate('AccountLogIn');
   };
 
   const navigateToCreateAccount = () => {

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Text, TextInput, Button, SafeAreaView, ScrollView } from 'react-native';
-// import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import style from './style';
 
-// type AccountLogInParamList = {
-//   Home: undefined;
-// };
+type AccountLogInParamList = {
+  AccountHome: undefined;
+};
 
 const AccountLogIn: React.FC = () => {
   const [accountLogInData, setAccountLogInData] = useState({
@@ -13,11 +13,11 @@ const AccountLogIn: React.FC = () => {
     password: '',
   });
 
-  //   const navigation = useNavigation<NavigationProp<AccountLogInParamList>>();
+  const navigation = useNavigation<NavigationProp<AccountLogInParamList>>();
 
   const navigateToAccountHome = () => {
-    console.log('Navigate to Account Home');
-    // navigation.navigate('AccountHome');
+    // console.log('Navigate to Account Home');
+    navigation.navigate('AccountHome');
   };
 
   const createAccount = () => {

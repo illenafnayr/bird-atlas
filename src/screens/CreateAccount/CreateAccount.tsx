@@ -4,7 +4,7 @@ import { NavigationProp, useNavigation } from '@react-navigation/native';
 import style from './style';
 
 type CreateAccountStackParamList = {
-  Home: undefined;
+  AccountHome: undefined;
 };
 
 const CreateAccount: React.FC = () => {
@@ -19,7 +19,7 @@ const CreateAccount: React.FC = () => {
   const navigation = useNavigation<NavigationProp<CreateAccountStackParamList>>();
 
   const handleNavigate = () => {
-    navigation.navigate('Home');
+    navigation.navigate('AccountHome');
   };
 
   const createAccount = () => {
