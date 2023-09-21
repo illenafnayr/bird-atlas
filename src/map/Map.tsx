@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
 import MapboxGL from '@rnmapbox/maps';
 import style from './style';
 import { MAPBOX_ACCESS_TOKEN } from '@env';
@@ -14,14 +14,11 @@ try {
 export class BirdMap extends React.Component<{}, {}> {
   render() {
     return (
-      <View style={style.page}>
+      <SafeAreaView style={style.page}>
         <View style={style.container}>
-          <MapboxGL.MapView
-            style={style.map}
-            styleURL="mapbox://styles/illenafnayr/clmgc41xb01j101qx1hqib24h"
-          />
+          <MapboxGL.MapView style={style.map} styleURL="mapbox://styles/illenafnayr/clmgc41xb01j101qx1hqib24h" />
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }

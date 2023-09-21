@@ -12,4 +12,10 @@ Bird Atlas - Bird Watching Companion
     
 ## Run instructions for macOS:
   - See https://aka.ms/ReactNativeGuideMacOS for the latest up-to-date instructions.
+
+## Update .env:
+MAPBOX_ACCESS_TOKEN
+
+## Update android/gradle.properties
+
     
