@@ -7,7 +7,7 @@ type CreateAccountStackParamList = {
   Home: undefined;
 };
 
-const BirdRecordInput: React.FC = () => {
+const CreateAccount: React.FC = () => {
   const [accountData, setAccountData] = useState({
     name: '',
     email: '',
@@ -43,7 +43,7 @@ const BirdRecordInput: React.FC = () => {
           style={style.input}
           value={accountData.name}
           onChangeText={name => setAccountData({ ...accountData, name })}
-          placeholder="Name Of bird"
+          placeholder="Enter your name..."
           keyboardType="default"
         />
 
@@ -51,7 +51,7 @@ const BirdRecordInput: React.FC = () => {
           style={style.input}
           value={accountData.email}
           onChangeText={email => setAccountData({ ...accountData, email })}
-          placeholder="Bird Type"
+          placeholder="Enter email..."
           keyboardType="default"
         />
 
@@ -59,7 +59,7 @@ const BirdRecordInput: React.FC = () => {
           style={style.input}
           value={accountData.password}
           onChangeText={password => checkPasswordMatch(password, accountData.checkPassword)}
-          placeholder="Image Source"
+          placeholder="Enter password..."
           keyboardType="default"
         />
 
@@ -67,7 +67,7 @@ const BirdRecordInput: React.FC = () => {
           style={style.input}
           value={accountData.checkPassword}
           onChangeText={checkPassword => checkPasswordMatch(accountData.password, checkPassword)}
-          placeholder="Location"
+          placeholder="Confirm password..."
           keyboardType="default"
         />
 
@@ -75,7 +75,7 @@ const BirdRecordInput: React.FC = () => {
           onPress={createAccount}
           title="Create Account"
           color="#841584"
-          accessibilityLabel="Submit record of bird or birds spotted"
+          accessibilityLabel="Create Account"
         />
 
         <Text>Name: {accountData.name}</Text>
@@ -86,4 +86,4 @@ const BirdRecordInput: React.FC = () => {
   );
 };
 
-export default BirdRecordInput;
+export default CreateAccount;
