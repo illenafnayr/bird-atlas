@@ -5,7 +5,7 @@ import Logo from '../../common/logo/Logo';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 type HomeStackParamList = {
-  BirdRecordInput: undefined;
+  CreateAccount: undefined;
 };
 
 interface HomeProps {
@@ -15,18 +15,29 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = () => {
   const navigation = useNavigation<NavigationProp<HomeStackParamList>>();
 
-  const handleNavigate = () => {
-    navigation.navigate('BirdRecordInput');
+  const navigateToAccountLogin = () => {
+    console.log('Navigate to Account Login');
+    // navigation.navigate('AccountLogin');
+  };
+
+  const navigateToCreateAccount = () => {
+    navigation.navigate('CreateAccount');
   };
 
   return (
     <SafeAreaView style={style.sectionContainer}>
       <Logo />
       <Button
-        onPress={handleNavigate}
-        title="Navigate Home"
+        onPress={navigateToAccountLogin}
+        title="Log In"
         color="#841584"
-        accessibilityLabel="Navigate to home Screen"
+        accessibilityLabel="Log In"
+      />
+      <Button
+        onPress={navigateToCreateAccount}
+        title="Create Account"
+        color="#841584"
+        accessibilityLabel="Create Account"
       />
     </SafeAreaView>
   );
